@@ -66,10 +66,6 @@
     </component>
   </components>
 
-  <csolution>
-    <clayer type="Board" path="Layers/IoT" file="Board.clayer.yml" copy-to="Board/STM32H747I-EVAL" condition="STM32H747I-EVAL"/>
-  </csolution>
-
   <boards>
     <!-- STM32H747I-EVAL -->
     <board vendor="STMicroelectronics" name="STM32H747I-EVAL" revision="Rev.B"
