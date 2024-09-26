@@ -2,7 +2,7 @@
 <package schemaVersion="1.7.36" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="https://raw.githubusercontent.com/Open-CMSIS-Pack/Open-CMSIS-Pack-Spec/v1.7.36/schema/PACK.xsd">
   <name>STM32H747I-EVAL_BSP</name>
   <vendor>Keil</vendor>
-  <description>STMicroelectronics STM32H7 Series STM32H747I-EVAL Board Support Pack</description>
+  <description overview="Documentation/OVERVIEW.md">STMicroelectronics STM32H7 Series STM32H747I-EVAL Board Support Pack</description>
   <url>https://www.keil.com/pack/</url>
   <repository type="git">https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP.git</repository>
   <license>LICENSE</license>
@@ -16,6 +16,7 @@
     <release version="1.0.0-dev">
       Prepared for new CMSIS-Toolbox CubeMX integration
       Board description for STM32H747I-EVAL
+      Added Blinky example (CMSIS Solution)
       Drivers:
       - CMSIS-Driver VIO
     </release>
@@ -69,17 +70,15 @@
   <boards>
     <!-- STM32H747I-EVAL -->
     <board vendor="STMicroelectronics" name="STM32H747I-EVAL" revision="Rev.B"
-           salesContact="https://www.st.com/content/st_com/en/contact-us.html"
-           orderForm   ="https://www.st.com/en/evaluation-tools/stm32h747i-eval.html">
+           salesContact="https://www.st.com/content/st_com/en/contact-us.html">
       <description>STM32 Evaluation development board with STM32H747XI MCU</description>
       <image small="Images/stm32h747i-eval_small.png"
              large="Images/stm32h747i-eval_large.png" public="true"/>
-      <book category="overview"  name="https://www.st.com/en/evaluation-tools/stm32h747i-eval.html"                                                                      title="STM32 Discovery board"/>
-      <book category="schematic" name="https://www.st.com/resource/en/schematic_pack/mb1246-b0x_schematic.pdf"                                                           title="Schematics"        public="true"/>
-      <book category="manual"    name="https://www.st.com/resource/en/user_manual/um2525-evaluation-boards-with-stm32h747xi-and-stm32h757xi-mcus-stmicroelectronics.pdf" title="User Manual"       public="true"/>
-      <book category="manual"    name="https://www.st.com/resource/en/data_brief/stm32h747i-eval.pdf"                                                                    title="Data Brief"        public="true"/>
-      <book category="other"     name="https://www.st.com/resource/en/board_manufacturing_specification/mb1246_manufacturing.zip"                                        title="Gerber Files"      public="true"/>
-      <book category="other"     name="Documents/README.md"                                                                                                              title="Guide"             public="true"/>
+      <book category="overview"  name="https://www.st.com/en/evaluation-tools/stm32h747i-eval.html" title="STM32H747I-EVAL Board"/>
+      <book category="overview"  name="https://www.st.com/resource/en/data_brief/stm32h747i-eval.pdf" title="Data Brief"/>
+      <book category="manual"    name="https://www.st.com/resource/en/user_manual/um2525-evaluation-boards-with-stm32h747xi-and-stm32h757xi-mcus-stmicroelectronics.pdf" title="User Manual"/>
+      <book category="schematic" name="https://www.st.com/resource/en/schematic_pack/mb1246-b0x_schematic.pdf" title="Schematics"/>
+      <book category="other"     name="Documents/README.md" title="Guide"/>
       <mountedDevice    deviceIndex="0" Dvendor="STMicroelectronics:13" Dname="STM32H747XIHx"/>
       <compatibleDevice deviceIndex="0" Dvendor="STMicroelectronics:13" DsubFamily="STM32H747"/>
       <feature type="ODbg"      n="1"              name="On-board ST-LINK-V3E"/>
@@ -117,4 +116,14 @@
       <debugProbe connector="Micro-USB" debugClock="10000000" debugLink="swd" name="ST-Link"/>
     </board>
   </boards>
+
+  <examples>
+    <example name="Blinky" folder="Examples/Blinky" doc="README.md">
+      <description>CMSIS-RTOS2 Blinky example with VIO</description>
+      <board name="STM32H747I-EVAL" vendor="STMicroelectronics"/>
+      <project>
+        <environment name="csolution" load="Blinky.csolution.yml"/>
+      </project>
+    </example>
+  </examples>
 </package>
