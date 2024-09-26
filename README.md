@@ -1,5 +1,6 @@
 [![Version](https://img.shields.io/github/v/release/Open-CMSIS-Pack/STM32H747I-EVAL_BSP)](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/releases/latest)
 [![License](https://img.shields.io/github/license/Open-CMSIS-Pack/STM32H747I-EVAL_BSP?label)](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/blob/main/LICENSE)
+[![Examples Build Test](https://img.shields.io/github/actions/workflow/status/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/Test-Examples.yml?logo=arm&logoColor=0091bd&label=Examples%20Build%20Test)](./.ci)
 
 # STM32H747I-EVAL_BSP
 
@@ -13,18 +14,12 @@ This BSP uses the generator integration of the [CMSIS-Toolbox to Configure STM32
 
 Directory                   | Description
 :---------------------------|:--------------
+[.ci](./.ci)                | Files that are related to the Continuous Integration (CI) tests of this BSP.
 [.github/workflows](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/.github/workflows) | [GitHub Actions](#github-actions) scripts described below.
 [CMSIS/Driver](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/CMSIS/Driver)           | Contains a [CMSIS-Driver VIO](https://arm-software.github.io/CMSIS_6/latest/Driver/group__vio__interface__gr.html) that is configured for the board peripherals.
-[Documents](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/Documents)                 | Information about the board provided by STMicroelectronics.
+[Documents](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/Documents)                 | [Usage overview](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/Documents/OVERVIEW.md) for examples and board documentation provided by STMicroelectronics.
+[Examples/Blinky](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/Examples/Blinky)     | Blinky example in *csolution project format* using [CMSIS-Driver VIO](https://arm-software.github.io/CMSIS_6/latest/Driver/group__vio__interface__gr.html) and [CMSIS-Compiler](https://arm-software.github.io/CMSIS-Compiler/main/index.html) for printf I/O retargeting.[
 [Images](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/tree/main/Images)                       | [Pictures](https://github.com/Open-CMSIS-Pack/STM32H747I-EVAL_BSP/blob/main/Images/stm32h747i-eval_large.png) of the board.
-
-## Usage
-
-This BSP requires the [Device Family Pack (DFP) for the STM32H7 series](https://github.com/Open-CMSIS-Pack/STM32H7xx_DFP).
-
-The device is configured for this board using [STM32CubeMX](https://www.st.com/en/development-tools/stm32cubemx.html). For additional information refer to:
-
-- [CMSIS-Toolbox - Configure STM32 Devices with CubeMX](https://github.com/Open-CMSIS-Pack/cmsis-toolbox/blob/main/docs/CubeMX.md) for usage information of STM32CubeMX with CMSIS projects.
 
 ## Using the development repository
 
@@ -46,6 +41,7 @@ Run this script locally with:
 The repository uses GitHub Actions to generate the pack and build examples:
 
 - `.github/workflows/pack.yml` based on [Open-CMSIS-Pack/gen-pack-action](https://github.com/Open-CMSIS-Pack/gen-pack-action) generates pack using the [Generate software pack](#generate-software-pack) scripts.
+- `.github/workflows/Test-Examples.yml` test build of examples.
 
 ## Issues
 

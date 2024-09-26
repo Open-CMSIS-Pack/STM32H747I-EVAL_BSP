@@ -27,11 +27,11 @@
 
 The table below lists the physical I/O mapping of this CMSIS-Driver VIO implementation.
 
-Virtual Resource  | Variable       | Physical Resource on STM32H747I-EVAL      |
-:-----------------|:---------------|:------------------------------------------|
-vioBUTTON0        | vioSignalIn.0  | PC13: Button USER                         |
-vioLED0           | vioSignalOut.0 | PA4 : LD3 RED                             |
-vioLED1           | vioSignalOut.1 | PF10: LD1 GREEN                           |
+| Virtual I/O   | Variable       | Board component      | Pin
+|:--------------|:---------------|:---------------------|:------
+| vioBUTTON0    | vioSignalIn.0  | Tamper button (B3)   | PC13
+| vioLED0       | vioSignalOut.0 | LED red       (LD3)  | PA4
+| vioLED1       | vioSignalOut.1 | LED green     (LD1)  | PF10
 */
 
 #include "cmsis_vio.h"
