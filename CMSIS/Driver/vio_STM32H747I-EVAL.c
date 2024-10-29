@@ -2,7 +2,7 @@
  * @file     vio_STM32H747I-EVAL.c
  * @brief    Virtual I/O implementation for board STM32H747I-EVAL
  * @version  V1.0.0
- * @date     5. September 2024
+ * @date     29. October 2024
  ******************************************************************************/
 /*
  * Copyright (c) 2024 Arm Limited (or its affiliates).
@@ -30,8 +30,8 @@ The table below lists the physical I/O mapping of this CMSIS-Driver VIO implemen
 | Virtual I/O   | Variable       | Board component      | Pin
 |:--------------|:---------------|:---------------------|:------
 | vioBUTTON0    | vioSignalIn.0  | Tamper button (B3)   | PC13
-| vioLED0       | vioSignalOut.0 | LED red       (LD3)  | PA4
-| vioLED1       | vioSignalOut.1 | LED green     (LD1)  | PF10
+| vioLED0       | vioSignalOut.0 | LED red       (LD3)  | PK5
+| vioLED1       | vioSignalOut.1 | LED green     (LD1)  | PK3
 */
 
 #include "cmsis_vio.h"
@@ -70,8 +70,8 @@ typedef struct {
 // VOUT Configuration
 static const pinCfg_t outputCfg[] = {
 //  signal,     pin,                   pull resistor,      active state
-  { vioLED0,    GPIO_PIN_ID_PORTA(4),  ARM_GPIO_PULL_NONE, VIO_ACTIVE_LOW },
-  { vioLED1,    GPIO_PIN_ID_PORTF(10), ARM_GPIO_PULL_NONE, VIO_ACTIVE_LOW }
+  { vioLED0,    GPIO_PIN_ID_PORTK(5),  ARM_GPIO_PULL_NONE, VIO_ACTIVE_LOW },
+  { vioLED1,    GPIO_PIN_ID_PORTK(3),  ARM_GPIO_PULL_NONE, VIO_ACTIVE_LOW }
 };
 #endif
 
