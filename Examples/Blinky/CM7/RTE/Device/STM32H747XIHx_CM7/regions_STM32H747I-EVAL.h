@@ -89,6 +89,8 @@
 #define __RAM3_SIZE 0
 // </h>
 
+// </h>
+
 // <n> Resources that are not allocated to linker regions
 // <i> rw RAM:   DTCMRAM from DFP:  BASE: 0x20000000  SIZE: 0x00020000  Pname: CM7
 
