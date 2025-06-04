@@ -21,6 +21,14 @@ solution:
     - type: STM32H747I-EVAL
       board: STMicroelectronics::STM32H747I-EVAL
       device: STMicroelectronics::STM32H747XIHx
+      target-set:
+        - set:
+          debugger:
+            name: ST-LINK
+            start-pname: CM7
+          images:
+            - project-context: Blinky_cm4.Debug
+            - project-context: Blinky_cm7.Debug
 
   # List of different build configurations.
   build-types:

@@ -2,6 +2,7 @@ default:
   misc:
     - for-compiler: AC6
       C-CPP:
+        - -gdwarf-5
         - -Wno-macro-redefined
         - -Wno-pragma-pack
         - -Wno-parentheses-equality
@@ -10,6 +11,7 @@ default:
         - -std=gnu11
       ASM:
         - -masm=auto
+        - -gdwarf-5
       Link:
         - --entry=Reset_Handler
         - --map

@@ -3,6 +3,11 @@ project:
 
   device: :CM7
 
+  # Project define
+  define:
+    - OS_IDLE_THREAD_NAME: \"Idle\"
+    - OS_TIMER_THREAD_NAME: \"Timer\"
+
   # List components to use for your application.
   # A software component is a re-usable unit that may be configurable.
   components:
@@ -37,3 +42,10 @@ project:
     - script:  ./RTE/Device/STM32H747XIHx_CM7/ac6_linker_script.sct.src
       regions: ./RTE/Device/STM32H747XIHx_CM7/regions_STM32H747I-EVAL.h
       for-compiler: AC6
+
+  output:
+    type:
+      - elf
+      - bin
+      - hex
+      - map

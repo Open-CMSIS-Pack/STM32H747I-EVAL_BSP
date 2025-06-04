@@ -24,3 +24,10 @@ project:
     - script:  ./RTE/Device/STM32H747XIHx_CM4/ac6_linker_script.sct.src
       regions: ./RTE/Device/STM32H747XIHx_CM4/regions_STM32H747I-EVAL.h
       for-compiler: AC6
+
+  output:
+    type:
+      - elf
+      - bin
+      - hex
+      - map

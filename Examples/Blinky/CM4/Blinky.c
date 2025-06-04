@@ -20,9 +20,9 @@
 #include "main.h"
 #include "cmsis_vio.h"
 
-/*-----------------------------------------------------------------------------
- * Application main
- *----------------------------------------------------------------------------*/
+/*
+  Application initialization.
+*/
 int app_main (void) {
   for (;;) {
     vioSetSignal(vioLED1, vioLEDon);            // Switch LED1 on
