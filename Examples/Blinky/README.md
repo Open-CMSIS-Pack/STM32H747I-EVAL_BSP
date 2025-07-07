@@ -13,6 +13,7 @@ is available with various real-time operating systems, for example RTX5 or FreeR
 - Wait until CPU2 boots and enters stop mode.
 - System initialization.
 - Wake-up CPU2.
+- Outputs "Blinky Example" to UART that is connected to ST-Link (baudrate 115200bps).
 - The vioLED0 blinks in 1 sec interval.
 - The vioBUTTON0 changes the blink frequency.
 
