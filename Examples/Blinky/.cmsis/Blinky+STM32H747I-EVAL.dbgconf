@@ -1,5 +1,5 @@
 // File: STM32H745_747_755_757.dbgconf
-// Version: 1.0.0
+// Version: 1.1.1
 // Note: refer to STM32H745/755 and STM32H747/757 reference manual (RM0399)
 //       refer to STM32H745xI/G datasheet
 //       refer to STM32H755xI datasheet
@@ -25,13 +25,13 @@ DbgMCU_CR = 0x000000F;
 //                                   <i> Reserved bits must be kept at reset value
 //   <o.6>  WWDG1                    <i> WWDG1 stop in debug
 // </h>
-DbgMCU_APB3_Fz1 = 0x00000000;
+DbgMCU_APB3_Fz1 = 0x00000040;
 
 // <h> DBGMCU APB3 peripheral freeze register CPU2 (DBGMCU_APB3FZ2)
 //                                   <i> Reserved bits must be kept at reset value
 //   <o.6>  WWDG1                    <i> WWDG1 stop in debug
 // </h>
-DbgMCU_APB3_Fz2 = 0x00000000;
+DbgMCU_APB3_Fz2 = 0x00000040;
 
 // <h> DBGMCU APB1L peripheral freeze register CPU1 (DBGMCU_APB1LFZ1)
 //                                   <i> Reserved bits must be kept at reset value
@@ -50,7 +50,7 @@ DbgMCU_APB3_Fz2 = 0x00000000;
 //   <o.1>  DBG_TIM3                 <i> TIM3 stop in debug
 //   <o.0>  DBG_TIM2                 <i> TIM2 stop in debug
 // </h>
-DbgMCU_APB1L_Fz1 = 0x00000000;
+DbgMCU_APB1L_Fz1 = 0x00E00BFF;
 
 // <h> DBGMCU APB1L peripheral freeze register CPU2 (DBGMCU_APB1LFZ2)
 //                                   <i> Reserved bits must be kept at reset value
@@ -69,7 +69,7 @@ DbgMCU_APB1L_Fz1 = 0x00000000;
 //   <o.1>  DBG_TIM3                 <i> TIM3 stop in debug
 //   <o.0>  DBG_TIM2                 <i> TIM2 stop in debug
 // </h>
-DbgMCU_APB1L_Fz2 = 0x00000000;
+DbgMCU_APB1L_Fz2 = 0x00E00BFF;
 
 // <h> DBGMCU APB2 peripheral freeze register CPU1 (DBGMCU_APB2FZ1)
 //                                   <i> Reserved bits must be kept at reset value
@@ -80,7 +80,7 @@ DbgMCU_APB1L_Fz2 = 0x00000000;
 //   <o.1>  DBG_TIM8                 <i> TIM8 stop in debug
 //   <o.0>  DBG_TIM1                 <i> TIM1 stop in debug
 // </h>
-DbgMCU_APB2_Fz1 = 0x00000000;
+DbgMCU_APB2_Fz1 = 0x20070003;
 
 // <h> DBGMCU APB2 peripheral freeze register CPU2 (DBGMCU_APB2FZ2)
 //                                   <i> Reserved bits must be kept at reset value
@@ -91,7 +91,7 @@ DbgMCU_APB2_Fz1 = 0x00000000;
 //   <o.1>  DBG_TIM8                 <i> TIM8 stop in debug
 //   <o.0>  DBG_TIM1                 <i> TIM1 stop in debug
 // </h>
-DbgMCU_APB2_Fz2 = 0x00000000;
+DbgMCU_APB2_Fz2 = 0x20070003;
 
 // <h> DBGMCU APB4 peripheral freeze register CPU1 (DBGMCU_APB4FZ1)
 //                                   <i> Reserved bits must be kept at reset value
@@ -104,7 +104,7 @@ DbgMCU_APB2_Fz2 = 0x00000000;
 //   <o.9>  DBG_LPTIM2               <i> LPTIM2 stop in debug
 //   <o.7>  DBG_I2C4                 <i> I2C4 SMBUS timeout stop in debug
 // </h>
-DbgMCU_APB4_Fz1 = 0x00000000;
+DbgMCU_APB4_Fz1 = 0x000C1E80;
 
 // <h> DBGMCU APB4 peripheral freeze register CPU2 (DBGMCU_APB4FZ2)
 //                                   <i> Reserved bits must be kept at reset value
@@ -117,7 +117,7 @@ DbgMCU_APB4_Fz1 = 0x00000000;
 //   <o.9>  DBG_LPTIM2               <i> LPTIM2 stop in debug
 //   <o.7>  DBG_I2C4                 <i> I2C4 SMBUS timeout stop in debug
 // </h>
-DbgMCU_APB4_Fz2 = 0x00000000;
+DbgMCU_APB4_Fz2 = 0x000C1E80;
 
 // <h> TPIU Pin Routing (TRACECLK fixed on Pin PE2)
 //   <i> TRACECLK: Pin PE2
